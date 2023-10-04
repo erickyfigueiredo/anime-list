@@ -5,7 +5,7 @@ axios.defaults.baseURL = environment.API_BASE;
 
 export async function fetchAnimeInfo(route) {
     try {
-        const response = await axios.get("meta/anilist/info/"+ route.params.slug + "?provider=gogoanime" );
+        const response = await axios.get(environment.API_META +"info/"+ route.params.slug + "?provider=gogoanime" );
         return response.data;
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
