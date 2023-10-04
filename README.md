@@ -6,6 +6,9 @@ This is a Vue 3 application that displays an animes from API
 
 The application consists of several Vue components that together form an anime grid with slider functionality.
 
+![Screenshot](./imgs/img.png)
+![Screenshot](./imgs/img2.png)
+
 ## Features
 
 - Displays an anime grid.
