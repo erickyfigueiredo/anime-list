@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { environment } from './environments/environments.js';
 
-axios.defaults.baseURL = 'https://api.consumet.org/'
+axios.defaults.baseURL = environment.API_BASE;
 
 export async function fetchAnimeInfo(route) {
     try {
@@ -13,7 +14,7 @@ export async function fetchAnimeInfo(route) {
 
 export async function fetchAnimeSlider() {
     try {
-        const response = await axios.get('meta/anilist/popular?page=1&perPage=20');
+        const response = await axios.get(environment.API_META +'popular?page=1&perPage=20');
         return response.data;
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
@@ -22,7 +23,7 @@ export async function fetchAnimeSlider() {
 
 export async function fetchAnimeRandom() {
     try {
-        const response = await axios.get('meta/anilist/random-anime', {
+        const response = await axios.get(environment.API_META +'random-anime', {
             headers: {
             "Cache-control": "no-cache"
         }
@@ -44,7 +45,7 @@ export async function fetchAnimePlayer(route) {
 
 export async function fetchAnimeGrid(type, page = 1) {
     try {
-        const response2 = await axios.get('https://api.consumet.org/meta/anilist/advanced-search?type=ANIME&genres=["'+ type +'"]&page='+ page +'&perPage=50');
+        const response2 = await axios.get(environment.API_META +'advanced-search?type=ANIME&genres=["'+ type +'"]&page='+ page +'&perPage=50');
         return response2.data;
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
