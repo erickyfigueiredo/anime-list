@@ -1,7 +1,39 @@
-# Vue 3 + Vite
+# AnimeNav App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a Vue 3 application that displays an animes from API
 
-## Recommended IDE Setup
+## Overview
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The application consists of several Vue components that together form an anime grid with slider functionality.
+
+## Features
+
+- Displays an anime grid.
+- Allows navigating through animes using left and right arrows.
+- Clicking on an anime redirects the user to a details page.
+- Watch animes from free-api
+
+## Installation
+
+1. Clone this repository:
+2. Cd anime-list
+3. npm install
+4. npm run serve
+
+## Show animes
+
+1. Create a paste environments with environments.js
+2. Add api url ex:
+```
+export const environment = {
+    API_BASE: "https://api.example.com",
+    API_META: "url/example"
+}
+```
+3. Enjoy it!
+
+## Contribution
+Feel free to contribute improvements or fixes to this application. Just open a pull request with your changes.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
